@@ -1,0 +1,19 @@
+#Bubble sort implememntation
+lst = [9,8,7,6,5,4,3,2,1,35,65,87]
+
+#Creating a function for code reusability
+def bubble_sort(lst):
+    length = len(lst)
+    temp = 0;
+    for i in range(length-1):
+        for j in range(length-i-1):
+            if(lst[j] > lst[j+1]):
+                temp = lst[j];
+                lst[j] = lst[j+1];
+                lst[j+1] = temp
+                
+#Calling the function
+bubble_sort(lst)
+
+#Printing the output list
+print(lst)
