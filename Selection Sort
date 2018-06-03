@@ -1,0 +1,18 @@
+#Selection sort implememntation
+lst = [9,8,7,6,5,4,3,2,1,35,65,87]
+
+#Creation a function code reusability
+def selection_sort(lst):
+    length = len(lst);
+    for i in range(length):
+        min = i;
+        for j in range(i+1, length):
+            if(lst[min]>lst[j]):
+                min = j;
+        lst[i], lst[min] = lst[min], lst[i];
+
+#calling the function
+selection_sort(lst);
+
+#Printing the output
+print(lst);
